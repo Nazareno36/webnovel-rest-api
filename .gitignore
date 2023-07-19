@@ -2,5 +2,4 @@ rome.json
 node_modules/
 api.rest
 package-lock.json
-package.json
 .env
