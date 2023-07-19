@@ -6,7 +6,7 @@ const novelsSchema = new Schema(
     synopsis: { type: String, required: true },
     author: { type: String, required: true },
     books: [{type: Schema.Types.ObjectId, ref: "Book"}],
-    chapters: [{type: Schema.Types.ObjectIdj, ref: "Chapter"}]
+    chapters: [{type: Schema.Types.ObjectId, ref: "Chapter"}]
   },
   {
     timestamps: true,
