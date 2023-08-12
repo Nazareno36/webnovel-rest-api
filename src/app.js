@@ -8,12 +8,7 @@ app.use(morgan("dev"));
 app.use(cors());
 app.use(express.json());
 
-//Routers:
-const novelsRouter = require("./routes/novels.routes");
-const adminRouter = require("./routes/admin.routes");
-
-//Routes:
-app.use("/api/novels", novelsRouter);
-app.use("/api/admin", adminRouter);
+//main routers
+app.use("/api/v1", require("./routers/v1"));
 
 module.exports = app;
