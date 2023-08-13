@@ -9,7 +9,7 @@ const chapterSchema = new Schema(
   },
   {
     timestamps: true,
-  },
+  }
 );
 
 module.exports = model("Chapter", chapterSchema);
