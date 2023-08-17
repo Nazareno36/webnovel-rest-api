@@ -1,7 +1,9 @@
+import supertest from "supertest";
+import { describe, it } from "mocha";
+import { expect } from "chai";
+
 const baseUrl = "localhost:3000/api/v1";
-const request = require("supertest")(baseUrl);
-const { describe, it } = require("mocha");
-const expect = require("chai").expect;
+const request = supertest(baseUrl);
 
 describe("POST /novels", () => {
 	it("should return a 201 status", async () => {

@@ -1,14 +1,16 @@
-const express = require("express");
-const morgan = require("morgan");
-const cors = require("cors");
+import express, { json } from "express";
+import morgan from "morgan";
+import cors from "cors";
+import mainRouterV1 from "./routers/v1/mainRouter.js";
+
 const app = express();
 
 //Middlewares
 app.use(morgan("dev"));
 app.use(cors());
-app.use(express.json());
+app.use(json());
 
 //main routers
-app.use("/api/v1", require("./routers/v1"));
+app.use("/api/v1", mainRouterV1);
 
-module.exports = app;
+export default app;

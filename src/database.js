@@ -1,10 +1,9 @@
-const mongoose = require("mongoose");
+import { connect } from "mongoose";
 
-mongoose
-	.connect(process.env.DATABASE_URL, {
-		useUnifiedTopology: true,
-		useNewUrlParser: true,
-	})
+connect(process.env.DATABASE_URL, {
+	useUnifiedTopology: true,
+	useNewUrlParser: true,
+})
 	.then(() => {
 		console.log("Database is connected");
 	})

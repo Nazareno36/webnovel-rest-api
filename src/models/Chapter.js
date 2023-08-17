@@ -1,15 +1,15 @@
-const { Schema, model } = require("mongoose");
+import { Schema, model } from "mongoose";
 
 const chapterSchema = new Schema(
 	{
 		title: { type: String, required: true },
 		content: { type: String, required: true },
-		book: { type: Schema.Types.ObjectId, ref: "Book" },
-		novel: { type: Schema.Types.ObjectId, ref: "Novel", required: true },
+		bookId: { type: Schema.Types.ObjectId, ref: "Book" },
+		novelId: { type: Schema.Types.ObjectId, ref: "Novel", required: true },
 	},
 	{
 		timestamps: true,
 	},
 );
 
-module.exports = model("Chapter", chapterSchema);
+export default model("Chapter", chapterSchema);

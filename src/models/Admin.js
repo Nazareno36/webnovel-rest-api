@@ -1,8 +1,8 @@
-const { Schema, model } = require("mongoose");
+import { Schema, model } from "mongoose";
 
 const adminSchema = new Schema({
 	password: { type: String, required: true },
 	online: { type: Boolean, default: false },
 });
 
-module.exports = model("Admin", adminSchema);
+export default model("Admin", adminSchema);
